@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pottfolio</title>
+  <link rel="stylesheet" href="public/styles/index.css">
+  <link rel="stylesheet" href="public/styles/timeline.css">
+  <link rel="stylesheet" href="public/styles/navbar.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap">
+
+  <!-- Font Awesome via CDNJS  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="#">AM</a>
+    </div>
+    <input type="checkbox" class="toggle" id="nav-toggle">
+    <label for="nav-toggle" id="nav-toggle-label">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </label>
+    <nav class="my-navbar">
+      <ul class="nav-items">
+        <li><a href="#hero-section"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="#definition"><i class="fas fa-tasks"></i></i>Skills</a></li>
+        <li><a href="#projects"><i class="fas fa-briefcase"></i>Projects</a></li>
+        <li><a href="#experience"><i class="fas fa-trophy"></i>Experience</a></li>
+        <li><a href="#contact"><i class="far fa-envelope-open"></i>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero-section" id="hero-section">
+    <div class="intro">
+      <p>Hello My name is Mustapha Abdelaziz, and I am a <span>Full Stack Web Developer</span></p>
+    </div>
+    <div class="avatar"><img src="public/assets/myprofile.jpg" alt=""></div>
+  </section>
+  <section class="definition" id="definition">
+    <div class="about-me" data-aos="fade-up">
+      <h1>About Me</h1>
+      <p> I am excited to be challenged in order to grow with web technologies and further improve my IT skills. My
+        greatest
+        passion is in life is using my technical knowledge to transform needs into solutions and to make life better and
+        easier.</p>
+    </div>
+    <h1 data-aos="zoom-in">What I Do</h1>
+    <div class="skills" data-aos="fade-right">
+      <h2>Frontend Dev</h2>
+      <div class="skills-logos">
+        <img src="https://www.agiledrop.com/sites/default/files/2020-10/JavascriptLogo.svg" alt="">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1184px-Vue.js_Logo_2.svg.png"
+          alt="">
+        <img src="https://iconape.com/wp-content/files/zk/93042/svg/react.svg" alt="">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png"
+          alt="">
+        <img src="https://miro.medium.com/max/512/1*9U1toerFxB8aiFRreLxEUQ.png" alt="">
+        <img src="https://javidomenech.eu/assets/images/jQuery.png" alt="">
+      </div>
+    </div>
+    <div class="skills" data-aos="fade-left">
+      <h2>Backend Dev</h2>
+      <div class="skills-logos">
+        <img src="https://torbjornzetterlund.com/wp-content/uploads/2019/09/nodejslogo.png" alt="">
+        <img src="https://pngimage.net/wp-content/uploads/2018/05/express-js-png-5.png" alt="">
+        <img src="https://image.flaticon.com/icons/png/512/919/919830.png" alt="">
+        <img src="https://logos-marques.com/wp-content/uploads/2021/03/Java-Logo.png" alt="">
+        <img src="https://www.dariawan.com/media/images/tutorial-spring-logo.width-400.png" alt="">
+        <img src="https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Logo.png" alt="">
+        <img src="https://1000logos.net/wp-content/uploads/2020/08/MySQL-Logo.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div data-aos="zoom-in" class="title">
+      <h1>Projects</h1>
+    </div>
+    <div class="projects-container">
+      <div class="projectCard" data-aos="fade-left">
+        <div class="priview">
+          <a href="https://eventplusdz.herokuapp.com/" target="_blank">
+            <img src="public/assets/eventplus.png" alt="eventplus">
+          </a>
+        </div>
+        <div class="project-detail">
+          <a href="https://eventplusdz.herokuapp.com/" target="_blank"><i class="bi bi-eye"></i></a>
+          <a href="https://github.com/Mustapha19/EventPlus.git" target="_blank"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+      <div class="projectCard" data-aos="fade-left">
+        <div class="priview">
+          <a href="tahwissa.herokuapp.com" target="_blank">
+            <img src="public/assets/tahwissa.png" alt="tahwissa">
+          </a>
+        </div>
+        <div class="project-detail">
+          <a href="https://tahwissa.herokuapp.com" target="_blank"><i class="bi bi-eye"></i></a>
+          <a href="https://github.com/Mustapha19/Tahwissa.git" target="_blank"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+      <div class="projectCard" data-aos="fade-left">
+        <div class="priview">
+          <a href="tahwissa.herokuapp.com" target="_blank">
+            <img src="public/assets/tahwissa.png" alt="tahwissa">
+          </a>
+        </div>
+        <div class="project-detail">
+          <a href="https://tahwissa.herokuapp.com" target="_blank"><i class="bi bi-eye"></i></a>
+          <a href="https://github.com/Mustapha19/Tahwissa.git" target="_blank"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="experience" id="experience">
+    <div data-aos="zoom-in">
+      <h1>Experience</h1>
+    </div>
+    <div class="timeline">
+      <div class="container left" data-aos="fade-left">
+        <div class="date">02/2020 – 09/2020</div>
+        <div class="content">
+          <h2>Internship as a System Administrator at Algerie Telecom, Tlemcen</h2>
+          <p>
+            Virtualization of IP Multimedia Subsystem IMS, deploying Multimedia services such as audio and video call
+            on a cloud platform Using Openstack as Infrastructure as a Service and Clearwater
+          </p>
+        </div>
+      </div>
+      <div class="container right" data-aos="fade-right">
+        <div class="date">03/2021 – 09/2021</div>
+        <div class="content">
+          <h2>Full-Stack Web Developer at EventPlus, Alger</h2>
+          <p>
+            Building a platform for managing diffrent types of events
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div>
+      <h1> Contact</h1>
+    </div>
+
+  </section>
+  <script src="bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

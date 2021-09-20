@@ -1,0 +1,449 @@
+:root {
+  --nav-gradient: linear-gradient(to right, #434343 0%, #263238 100%);
+
+  --nav-height: 3rem;
+
+  --transition: 250ms ease-out;
+  --transition-long: 500ms ease-out;
+}
+@import url("https: //fonts.gstatic.com");
+
+$font-stack: "Nunito",sans-serif;
+$textColor:#1f262b;
+@mixin theme($background:#e6a80e, $text:#1f262b) {
+  font: $font-stack;
+  background: $background;
+  color: $text;
+}
+
+@mixin flexBox($display:flex, $flexDir:row, $flexWrap:nowrap, $justifyCont:space-around) {
+  display: $display;
+  flex-direction: $flexDir;
+  flex-wrap: $flexWrap;
+  justify-content: $justifyCont;
+}
+
+
+
+// ============================================= hero section ==================================================
+.hero-section {
+  @include theme($text:#1f262b);
+  background-image: linear-gradient(360deg, #FBC02D 0%, #eb8f06 100%);
+
+  @include flexBox($display:flex, $flexDir:row, $flexWrap:nowrap, $justifyCont:space-between);
+  align-items: center;
+
+  .intro {
+    p {
+      
+      font: 35px $font-stack;
+      line-height: 30px;
+      text-align: center;
+      margin: 30px;
+
+      span {
+        font: 50px $font-stack;
+        font-weight: bold;
+      }
+    }
+
+
+  }
+
+  .avatar {
+    margin: 20px 20px;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+
+    img {
+      object-fit: fill;
+      width: 100%;
+      filter: sepia(10%);
+      border-radius: 50px 50px;
+
+    }
+  }
+}
+
+// ========================================== Definition Section =============================================
+.definition {
+  @include flexBox($display:flex, $flexDir:column, $flexWrap:nowrap, $justifyCont:center);
+  // @include theme($text:#EEEEEE);
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  font: 25px $font-stack;
+  align-items: center;
+
+  h1 {
+    color: #e6a80e;
+  }
+
+  .about-me,
+  .skills {
+    @include flexBox($display:flex, $flexDir:column, $flexWrap:nowrap, $justifyCont:center);
+    align-items: center;
+    padding: 20px;
+    margin: 30px;
+    border: 1px solid #e6a80e;
+
+    p {
+      padding: 10px;
+    }
+
+    h1,
+    h2 {
+      color: #e6a80e;
+    }
+
+    .skills-logos {
+      @include flexBox($display:flex, $flexDir:row, $flexWrap:wrap, $justifyCont:center);
+      // margin: 0 auto;
+      margin-bottom: 30px;
+      text-align: center;
+      width: 100%;
+      border-radius: 10px 10px;
+      padding: 20px;
+      margin: 30px;
+
+      img {
+        margin: 20px;
+        width: 10%;
+        height: 10%;
+      }
+    }
+  }
+}
+
+.skills {
+  width: 60%;
+}
+
+.about-me {
+  width: 90%;
+  border-radius: 10px 10px;
+
+}
+
+// ==================================================== Projects Section =====================================================
+.projects {
+  @include flexBox($display:flex, $flexDir:column, $flexWrap:nowrap, $justifyCont:center);
+  // @include theme($text:#e6a80e);
+  background-image: linear-gradient(to right, #434343 0%, #263238 100%);
+  // background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  padding-bottom: 20px;
+  align-items: center;
+
+  .title {
+    padding: 20px;
+
+    h1 {
+      color: #e6a80e;
+      text-align: center;
+      padding: 20px;
+      font: 45px $font-stack;
+      font-weight: bold;
+    }
+  }
+
+  .projects-container {
+    @include flexBox($display:flex, $flexDir:row, $flexWrap:wrap, $justifyCont:flex-start);
+    font: 25px $font-stack;
+    align-items: center;
+    padding: 20px;
+
+    .projectCard {
+      @include flexBox($display:flex, $flexDir:column, $flexWrap:nowrap, $justifyCont:center);
+      align-items: center;
+      width: 30%;
+      border-radius: 10px 10px 0px 0px;
+      // background-color: #e6a80e;
+      // background-image: linear-gradient(to right, #FBC02D 0%, #eb8f06 80%);
+      // background-image: linear-gradient(to right, #F09819 0%, #EDDE5D 51%, #F09819 100%);
+      background-image: linear-gradient(180deg, #434343 0%, #263238 100%);
+      box-shadow: 1px 1px 10px #1c2429;
+      margin-left: auto;
+      margin-right: auto;
+
+
+      .priview {
+        overflow: hidden;
+        border-radius: 10px 10px 0px 0px;
+        width: 100%;
+
+        img {
+          transition: transform 2s,
+            filter 1.5s ease-in-out;
+          transform: scale(1.2);
+          transform-origin: center center;
+          filter: brightness(50%);
+          width: 100%;
+          height: 200px;
+          object-fit: fill;
+        }
+      }
+
+      .priview:hover img {
+        filter: brightness(100%);
+        transform: scale(1.4);
+      }
+
+      .project-detail {
+        @include flexBox($display:flex, $flexDir:row, $flexWrap:nowrap, $justifyCont:space-between);
+        align-items: center;
+        width: 100%;
+
+        a {
+          margin: 0px;
+          padding: 15px 0px;
+          width: 100%;
+          text-align: center;
+
+          i {
+            color: #ECEFF1;
+
+
+          }
+        }
+
+        a:hover {
+          color: white;
+          background-image: linear-gradient(90deg, #374146 0%, #383f42 50%);
+
+
+
+
+        }
+      }
+    }
+
+  }
+}
+
+// ========================================== Experience Section ===================================
+.experience {
+  @include flexBox($display:flex, $flexDir:column, $flexWrap:nowrap, $justifyCont:center);
+  // @include theme($background:#1f262b, $text:#e6a80e);
+  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%),
+    linear-gradient(to top, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.25) 200%);
+  background-blend-mode: multiply;
+
+  h1 {
+    color: #e6a80e;
+    text-align: center;
+    padding: 20px;
+    font: 45px $font-stack;
+    font-weight: bold;
+  }
+}
+
+.contact {
+  @include flexBox($display:flex, $flexDir:column, $flexWrap:nowrap, $justifyCont:center);
+  // @include theme($background:#1f262b, $text:#e6a80e);
+   background-image: linear-gradient(to right, #434343 0%, #263238 100%);
+
+  h1 {
+    color: #e6a80e;
+    text-align: center;
+    padding: 20px;
+    font: 45px $font-stack;
+    font-weight: bold;
+  }
+}
+
+
+
+
+// ============================= Media small ============================
+@media (min-width: 320px) and (max-width: 620px) {
+  .my-navbar {
+    @include flexBox($display:flex, $flexDir:column, $flexWrap:wrap, $justifyCont:space-between);
+
+    ul {
+      @include flexBox($display:flex, $flexDir:column, $flexWrap:wrap, $justifyCont:flex-start);
+
+      li {
+        flex-basis: auto;
+      }
+    }
+  }
+
+  .hero-section {
+    @include flexBox($display:flex, $flexDir:column, $flexWrap:wrap, $justifyCont:center);
+    align-items: center;
+
+    .intro {
+      p {
+        font: 22px $font-stack;
+        line-height: 50px;
+        margin: 30px;
+
+        span {
+          font: 30px $font-stack;
+          font-weight: bold;
+        }
+      }
+
+    }
+
+    .avatar {
+      margin: 10px 20px;
+      width: auto;
+      overflow: hidden;
+
+      img {
+        object-fit: fill;
+        // display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  .definition {
+    @include flexBox($display:flex, $flexDir:column, $flexWrap:wrap, $justifyCont:center);
+    @include theme($background:#1f262b, $text:#e6a80e);
+    align-items: center;
+    font: 18px $font-stack;
+
+    .about-me {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .skills {
+
+      .skills-logos {
+        @include flexBox($display:flex, $flexDir:row, $flexWrap:wrap, $justifyCont:center);
+        margin: 30px;
+
+        img {
+          margin: 20px;
+          width: 20%;
+          height: 20%;
+        }
+      }
+    }
+  }
+
+  .projects {
+
+    .projects-container {
+      @include flexBox($display:flex, $flexDir:column, $flexWrap:wrap, $justifyCont:center);
+      align-items: center;
+
+      .projectCard {
+        width: 80%;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+
+      }
+    }
+  }
+}
+
+// ============================= media Medieum =================================
+@media (min-width: 621px) and (max-width: 767px) {
+
+  .my-navbar {
+    margin: 0 auto;
+    @include flexBox($display:flex, $flexDir:column, $flexWrap:nowrap, $justifyCont:space-between);
+
+    ul {
+      @include flexBox($display:flex, $flexDir:column, $flexWrap:wrap, $justifyCont:flex-start);
+      padding: 20px;
+    }
+  }
+
+  .hero-section {
+    @include flexBox($display:flex, $flexDir:column, $flexWrap:wrap, $justifyCont:center);
+    align-items: center;
+
+    .intro {
+
+      // max-width: 50%;
+      p {
+        font: 25px $font-stack;
+        // line-height: 80px;
+        // margin: 30px;
+
+        span {
+          font: 30px $font-stack;
+
+        }
+      }
+    }
+
+    .avatar {
+      // margin: 10px 20px;
+      max-width: 100%;
+      overflow: hidden;
+
+      img {
+        object-fit: fill;
+        // display: block;
+        // margin-left: auto;
+        // margin-right: auto;
+        width: 100%;
+      }
+    }
+
+  }
+
+  .definition {
+    @include flexBox($display:flex, $flexDir:column, $flexWrap:nowrap, $justifyCont:center);
+    @include theme($background:#1f262b, $text:#e6a80e);
+    align-items: center;
+
+    .skills {
+      .skills-logos {
+        @include flexBox($display:flex, $flexDir:row, $flexWrap:wrap, $justifyCont:center);
+        margin: 30px;
+
+        img {
+          margin: 20px;
+          width: 20%;
+          height: 20%;
+        }
+      }
+    }
+  }
+
+  .projects {
+    text-align: center;
+
+    .projects-container {
+      @include flexBox($display:flex, $flexDir:row, $flexWrap:wrap, $justifyCont:flex-start);
+      align-items: center;
+      margin: 0px;
+
+      .projectCard {
+        width: 40%;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+
+
+
+
+@keyframes pulse {
+  0% {
+    @include theme($background:#2b353d, $text:#e6a80e);
+
+  }
+
+  50% {
+    @include theme($background:#1f262b, $text:#e6a80e);
+
+  }
+
+  100% {
+    @include theme($background:#1f262b, $text:#e6a80e);
+  }
+}

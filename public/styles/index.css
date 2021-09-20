@@ -1,3 +1,4 @@
+@import url("https: //fonts.gstatic.com");
 :root {
   --nav-gradient: linear-gradient(to right, #434343 0%, #263238 100%);
   --nav-height: 3rem;
@@ -5,8 +6,15 @@
   --transition-long: 500ms ease-out;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .hero-section {
-  font: Helvetica, sans-serif;
+  font: "Nunito", sans-serif;
   background: #e6a80e;
   color: #1f262b;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#FBC02D), to(#eb8f06));
@@ -28,23 +36,39 @@
           align-items: center;
 }
 
-.hero-section .intro p {
-  font: 35px Helvetica, sans-serif;
-  line-height: 30px;
-  text-align: center;
-  margin: 30px;
+.hero-section .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.hero-section .intro p span {
-  font: 50px Helvetica, sans-serif;
+.hero-section .intro p {
+  font: 35px "Nunito", sans-serif;
+  line-height: 30px;
+  text-align: center;
+  margin: 10px 30px;
+}
+
+.hero-section .intro span {
+  text-align: center;
+  font: 50px "Nunito", sans-serif;
   font-weight: bold;
 }
 
 .hero-section .avatar {
   margin: 20px 20px;
-  width: auto;
   height: auto;
   overflow: hidden;
+  width: 40%;
 }
 
 .hero-section .avatar img {
@@ -53,7 +77,7 @@
   width: 100%;
   -webkit-filter: sepia(10%);
           filter: sepia(10%);
-  border-radius: 50px 50px;
+  border-radius: 50% 50%;
 }
 
 .definition {
@@ -70,7 +94,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  font: 25px Helvetica, sans-serif;
+  font: 25px "Nunito", sans-serif;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -181,7 +205,7 @@
   color: #e6a80e;
   text-align: center;
   padding: 20px;
-  font: 45px Helvetica, sans-serif;
+  font: 45px "Nunito", sans-serif;
   font-weight: bold;
 }
 
@@ -198,7 +222,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  font: 25px Helvetica, sans-serif;
+  font: 25px "Nunito", sans-serif;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -319,7 +343,7 @@
   color: #e6a80e;
   text-align: center;
   padding: 20px;
-  font: 45px Helvetica, sans-serif;
+  font: 45px "Nunito", sans-serif;
   font-weight: bold;
 }
 
@@ -344,11 +368,11 @@
   color: #e6a80e;
   text-align: center;
   padding: 20px;
-  font: 45px Helvetica, sans-serif;
+  font: 45px "Nunito", sans-serif;
   font-weight: bold;
 }
 
-@media (min-width: 320px) and (max-width: 620px) {
+@media screen and (min-width: 320px) and (max-width: 576px) {
   .my-navbar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -398,18 +422,31 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .hero-section .intro p {
-    font: 22px Helvetica, sans-serif;
-    line-height: 50px;
-    margin: 30px;
+  .hero-section .intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .hero-section .intro p span {
-    font: 30px Helvetica, sans-serif;
+  .hero-section .intro p {
+    font: 25px "Nunito", sans-serif;
+  }
+  .hero-section .intro span {
+    font: 30px "Nunito", sans-serif;
     font-weight: bold;
+    margin: 10px;
+    text-align: center;
   }
   .hero-section .avatar {
     margin: 10px 20px;
-    width: auto;
     overflow: hidden;
   }
   .hero-section .avatar img {
@@ -432,13 +469,13 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    font: Helvetica, sans-serif;
+    font: "Nunito", sans-serif;
     background: #1f262b;
     color: #e6a80e;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font: 18px Helvetica, sans-serif;
+    font: 18px "Nunito", sans-serif;
   }
   .definition .about-me {
     margin-left: auto;
@@ -489,7 +526,7 @@
   }
 }
 
-@media (min-width: 621px) and (max-width: 767px) {
+@media screen and (min-width: 577) and (max-width: 768px) {
   .my-navbar {
     margin: 0 auto;
     display: -webkit-box;
@@ -538,13 +575,15 @@
             align-items: center;
   }
   .hero-section .intro p {
-    font: 25px Helvetica, sans-serif;
+    font: 25px "Nunito", sans-serif;
+    text-align: center;
   }
-  .hero-section .intro p span {
-    font: 30px Helvetica, sans-serif;
+  .hero-section .intro span {
+    font: 30px "Nunito", sans-serif;
+    text-align: center;
+    font-weight: bold;
   }
   .hero-section .avatar {
-    max-width: 100%;
     overflow: hidden;
   }
   .hero-section .avatar img {
@@ -565,7 +604,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    font: Helvetica, sans-serif;
+    font: "Nunito", sans-serif;
     background: #1f262b;
     color: #e6a80e;
     -webkit-box-align: center;
@@ -623,17 +662,17 @@
 
 @-webkit-keyframes pulse {
   0% {
-    font: Helvetica, sans-serif;
+    font: "Nunito", sans-serif;
     background: #2b353d;
     color: #e6a80e;
   }
   50% {
-    font: Helvetica, sans-serif;
+    font: "Nunito", sans-serif;
     background: #1f262b;
     color: #e6a80e;
   }
   100% {
-    font: Helvetica, sans-serif;
+    font: "Nunito", sans-serif;
     background: #1f262b;
     color: #e6a80e;
   }
@@ -641,17 +680,17 @@
 
 @keyframes pulse {
   0% {
-    font: Helvetica, sans-serif;
+    font: "Nunito", sans-serif;
     background: #2b353d;
     color: #e6a80e;
   }
   50% {
-    font: Helvetica, sans-serif;
+    font: "Nunito", sans-serif;
     background: #1f262b;
     color: #e6a80e;
   }
   100% {
-    font: Helvetica, sans-serif;
+    font: "Nunito", sans-serif;
     background: #1f262b;
     color: #e6a80e;
   }

@@ -6,10 +6,13 @@
   --transition: 250ms ease-out;
   --transition-long: 500ms ease-out;
 }
+
 @import url("https: //fonts.gstatic.com");
 
-$font-stack: "Nunito",sans-serif;
+$font-stack: "Nunito",
+sans-serif;
 $textColor:#1f262b;
+
 @mixin theme($background:#e6a80e, $text:#1f262b) {
   font: $font-stack;
   background: $background;
@@ -23,6 +26,12 @@ $textColor:#1f262b;
   justify-content: $justifyCont;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 
 
 // ============================================= hero section ==================================================
@@ -34,33 +43,34 @@ $textColor:#1f262b;
   align-items: center;
 
   .intro {
+    @include flexBox($display:flex, $flexDir:column, $flexWrap:wrap, $justifyCont:center);
     p {
-      
       font: 35px $font-stack;
       line-height: 30px;
       text-align: center;
-      margin: 30px;
-
-      span {
-        font: 50px $font-stack;
-        font-weight: bold;
-      }
+      margin: 10px 30px;
     }
 
+    span {
+      text-align: center;
+      font: 50px $font-stack;
+      font-weight: bold;
+      // margin: 30px;
+    }
 
   }
 
   .avatar {
     margin: 20px 20px;
-    width: auto;
+    // width: auto;
     height: auto;
     overflow: hidden;
-
+    width:40%;
     img {
       object-fit: fill;
       width: 100%;
       filter: sepia(10%);
-      border-radius: 50px 50px;
+      border-radius: 50% 50%;
 
     }
   }
@@ -239,7 +249,7 @@ $textColor:#1f262b;
 .contact {
   @include flexBox($display:flex, $flexDir:column, $flexWrap:nowrap, $justifyCont:center);
   // @include theme($background:#1f262b, $text:#e6a80e);
-   background-image: linear-gradient(to right, #434343 0%, #263238 100%);
+  background-image: linear-gradient(to right, #434343 0%, #263238 100%);
 
   h1 {
     color: #e6a80e;
@@ -254,7 +264,7 @@ $textColor:#1f262b;
 
 
 // ============================= Media small ============================
-@media (min-width: 320px) and (max-width: 620px) {
+@media screen and (min-width: 320px) and (max-width: 576px) {
   .my-navbar {
     @include flexBox($display:flex, $flexDir:column, $flexWrap:wrap, $justifyCont:space-between);
 
@@ -272,22 +282,25 @@ $textColor:#1f262b;
     align-items: center;
 
     .intro {
+      @include flexBox($display:flex, $flexDir:column, $flexWrap:wrap, $justifyCont:center);
       p {
-        font: 22px $font-stack;
-        line-height: 50px;
-        margin: 30px;
+        font: 25px $font-stack;
+        // line-height: 30px;
+        // margin: 10px 50px;
+      }
 
-        span {
-          font: 30px $font-stack;
-          font-weight: bold;
-        }
+      span {
+        font: 30px $font-stack;
+        font-weight: bold;
+        margin: 10px;
+        text-align: center;
       }
 
     }
 
     .avatar {
       margin: 10px 20px;
-      width: auto;
+      // width: auto;
       overflow: hidden;
 
       img {
@@ -344,7 +357,7 @@ $textColor:#1f262b;
 }
 
 // ============================= media Medieum =================================
-@media (min-width: 621px) and (max-width: 767px) {
+@media screen and (min-width: 577) and (max-width: 768px) {
 
   .my-navbar {
     margin: 0 auto;
@@ -361,23 +374,27 @@ $textColor:#1f262b;
     align-items: center;
 
     .intro {
-
+// @include flexBox($display:flex, $flexDir:column, $flexWrap:wrap, $justifyCont:center);
       // max-width: 50%;
       p {
         font: 25px $font-stack;
         // line-height: 80px;
         // margin: 30px;
+        text-align: center;
+        // margin: 10px 50px;
+      }
 
-        span {
-          font: 30px $font-stack;
-
-        }
+      span {
+        font: 30px $font-stack;
+        text-align: center;
+        font-weight: bold;
+        // padding: 10px 100px;
       }
     }
 
     .avatar {
       // margin: 10px 20px;
-      max-width: 100%;
+      // max-width: 100%;
       overflow: hidden;
 
       img {

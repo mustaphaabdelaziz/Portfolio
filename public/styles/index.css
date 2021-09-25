@@ -411,6 +411,10 @@ body, html {
   text-decoration: none;
 }
 
+.contact .github {
+  color: #e6a80e;
+}
+
 .contact .portfolio {
   color: #e6a80e;
 }

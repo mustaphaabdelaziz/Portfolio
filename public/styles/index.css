@@ -52,7 +52,7 @@ body, html {
 
 .hero-section .intro p {
   font: 35px "Nunito", sans-serif;
-  line-height: 30px;
+  line-height: 40px;
   text-align: center;
   margin: 10px 30px;
 }
@@ -497,6 +497,7 @@ body, html {
   }
   .hero-section .intro p {
     font: 25px "Nunito", sans-serif;
+    line-height: 30px;
   }
   .hero-section .intro span {
     font: 30px "Nunito", sans-serif;
@@ -634,6 +635,7 @@ body, html {
   }
   .hero-section .intro p {
     font: 25px "Nunito", sans-serif;
+    margin: 30px;
     text-align: center;
   }
   .hero-section .intro span {

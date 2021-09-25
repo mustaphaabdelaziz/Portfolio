@@ -6,11 +6,10 @@
   --transition-long: 500ms ease-out;
 }
 
-* {
+body, html {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  width: 100%;
 }
 
 .hero-section {
@@ -184,8 +183,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -219,9 +218,9 @@
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font: 25px "Nunito", sans-serif;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -245,14 +244,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30%;
+  width: 25%;
   border-radius: 10px 10px 0px 0px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#434343), to(#263238));
   background-image: linear-gradient(180deg, #434343 0%, #263238 100%);
   -webkit-box-shadow: 1px 1px 10px #1c2429;
           box-shadow: 1px 1px 10px #1c2429;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .projects .projects-container .projectCard .priview {
@@ -362,6 +359,9 @@
           justify-content: center;
   background-image: -webkit-gradient(linear, left top, right top, from(#434343), to(#263238));
   background-image: linear-gradient(to right, #434343 0%, #263238 100%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact h1 {
@@ -370,6 +370,64 @@
   padding: 20px;
   font: 45px "Nunito", sans-serif;
   font-weight: bold;
+}
+
+.contact .contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .contact-info h3 {
+  padding: 10px;
+}
+
+.contact .social {
+  margin: 10px 0 12px 0;
+  text-align: center;
+  display: inline-block;
+  font-size: 40pt;
+}
+
+.contact .social i {
+  cursor: pointer;
+  margin: 0 15px;
+}
+
+.contact .social a {
+  text-decoration: none;
+}
+
+.contact .portfolio {
+  color: #e6a80e;
+}
+
+.contact .linkedin {
+  color: #3362c0;
+}
+
+.contact .twitter {
+  color: #1da1f2;
+}
+
+.contact .facebook {
+  color: #1565C0;
+}
+
+.contact .instagram {
+  color: #d84370;
 }
 
 @media screen and (min-width: 320px) and (max-width: 576px) {
@@ -528,7 +586,6 @@
 
 @media screen and (min-width: 577) and (max-width: 768px) {
   .my-navbar {
-    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

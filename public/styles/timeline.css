@@ -78,11 +78,11 @@
 }
 
 .container.left .date {
- right: -150px;
+ right: -160px;
 }
 
 .container.right .date {
- left: -150px;
+ left: -160px;
 }
 
 .container .content {
